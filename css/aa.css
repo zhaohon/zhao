@@ -1,0 +1,364 @@
+.q {
+	width: 100%;
+	height: 130px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+.q p {
+	color: #909090;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+.w {
+	width: 95%;
+	height: 340px;
+	text-align: center;
+	border: solid 1px #B2B2B2;
+	background: white;
+	
+}
+
+.w h2 {
+	margin-top: 25px;
+}
+
+.w span {
+	color: red;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.w:hover {
+	margin-top: -20px;
+	height: 360px;
+	border: 1px solid red;
+}
+
+.w:hover button {
+	background: red;
+	color: white;
+}
+
+.z {
+	margin-left: 30%;
+	margin-top: 75px;
+	width: 30%;
+	background: white;
+	border: solid 1px red;
+	color: red;
+}
+
+.z:hover {
+	color: white;
+	background: red;
+}
+
+.w button {
+	margin-top: 30px;
+	width: 60%;
+	background: white;
+	border: solid 1px red;
+	color: red;
+}
+
+.e {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.r p {
+	color: #000000;
+	font-size: 32px;
+}
+
+.r li {
+	color: #737383;
+	font-size: 15px;
+	list-style: disc;
+	margin-top: 20px;
+	width: 75%;
+}
+
+.a img {
+	width: 100%;
+	display: block;
+}
+
+.r h5 {
+	color: #737383;
+	width: 75%;
+}
+
+.d {
+	width: 80%;
+	height: 450px;
+	text-align: center;
+	margin: auto;
+}
+
+.d h2 {
+	padding-top: 120px;
+	font-size: 30px;
+}
+
+.d p {
+	padding-top: 20px;
+	color: #888888;
+	font-size: 15px;
+}
+.d img {
+	padding-top: 150px;
+}
+
+.f {
+	height: 250px;
+	background: white;
+	margin-top: 35px;
+}
+
+.f p {
+	width: 90%;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+.g {
+	text-align: center;
+	margin: auto;
+	width: 20%;
+	margin-bottom: 50px;
+	position: relative;
+	bottom: 25px;
+}
+        /* *************************HEADER S************************************ */
+        .header {
+            margin-bottom: 56px;
+        }
+
+        .nav {
+            width: 100%;
+            height: 56px;
+            background: white;
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+        }
+
+
+        .header .nav-logo {
+            height: 34.587px;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 10px 40px 0 60px;
+
+        }
+
+        .header .logo {
+            width: 115px;
+            margin: 0;
+        }
+
+        .header .nav-content li {
+            float: left;
+            color: #404040;
+            margin: 17px 0 0 49px;
+            cursor: pointer;
+        }
+
+        .header .nav-content li:hover {
+            color: #ff4f4c;
+        }
+
+        .header .nav-right {
+
+            margin: 0;
+        }
+
+        .header .n-ico {
+            margin-left: 55px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .toggle1 {
+            padding: 0 5px;
+            margin: 0 7px;
+        }
+
+        .header .toggle2 {
+            padding: 0 5px;
+            margin: 0 7px;
+        }
+
+        .header .n-ico i {
+            line-height: 56px;
+            font-size: 19px;
+            color: #404040;
+            cursor: pointer;
+        }
+
+
+
+        .header .n-ico .box1 {
+            width: 100px;
+            min-width: 0;
+            position: absolute;
+            top: 55px;
+            left: 26px;
+            color: #ff4f4c;
+            line-height: 22px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            display: none;
+            padding-top: 5px;
+            margin: 1px 0 0;
+            list-style: none;
+            font-size: 16px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            background-clip: padding-box;
+            box-sizing: border-box;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .header .n-ico .box1 p:nth-child(2) {
+            color: #404040;
+        }
+
+        .header .n-ico .box2 {
+            width: 250px;
+            min-width: 0;
+            position: absolute;
+            top: 55px;
+            left: 0px;
+            color: #404040;
+            height: 320px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            display: none;
+            padding: 15px 0 0 0;
+            margin: 1px 0 0;
+            list-style: none;
+            font-size: 15px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+            background-clip: padding-box;
+            box-sizing: border-box;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .header .n-ico .erweima {
+            width: 170px;
+            height: 170px;
+            margin: 0 0 10px 0;
+        }
+
+        .header .box2 .box2-btn1 {
+            width: 173px;
+            height: 35px;
+            background: #ff4f4c;
+            color: white;
+            border: 1px solid #ff4f4c;
+            border-radius: 3px;
+            margin: 0 0 10px 0;
+
+        }
+
+        .header .box2 .box2-btn2 {
+            width: 173px;
+            height: 35px;
+            background: white;
+            color: #ff4f4c;
+            border: 1px solid #ff4f4c;
+            border-radius: 3px;
+
+        }
+
+        .header .xian {
+            height: 26px;
+            width: 3px;
+            background: #DEDFE1;
+        }
+
+        .header .r-denglu {
+            width: 80px;
+            height: 32px;
+            margin-left: 14px;
+            background: white;
+            border: 1px solid #ff4f4c;
+            color: #ff4f4c;
+            border-radius: 3px;
+        }
+
+        .header .r-denglu:hover {
+            background: #ff4f4c;
+            color: white;
+        }
+
+        .header .r-zhuce {
+            width: 80px;
+            height: 32px;
+            margin-left: 14px;
+            background: #ff4f4c;
+            border: 1px solid #ff4f4c;
+            color: white;
+            border-radius: 3px;
+        }
+
+        .banner {
+            border: 3px solid black;
+            background-color: #ccc;
+            width: 100%;
+            height: 948px;
+            padding-top: 100px;
+            color: #404040;
+        }
+        .dbxz  a{
+        color: black;
+        }
+       .dbxz ul li {
+				margin-bottom: 12px;
+				color: #404040;
+			}
+			
+			.dbxz ul .dbwztx {
+				margin-bottom: 16px;
+			}
+			
+			.dbxz ul .dbwztx a {
+				color: #9B9B9B;
+			}
+			
+			.dbwzl1,
+			.dbwzl2,
+			.dbwzl3,			
+			.dbwzl5 {
+				padding: 0 15px;
+				width: 16.6666666667%;
+			}
+			
+			.dbwzl4{
+				padding: 0 15px;
+				width: 25%;
+			}
+			
+			.dbwzba1 {
+				width: 100%;
+				text-align: center;
+				color: #9B9B9B;
+				font-size: 13px;
+			}
+			.tu img{
+				position: relative;
+				top: 30px;
+				left: -120px;
+			}
+		
+        /* *************************HEADER E********************************** */

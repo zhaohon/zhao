@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="layui/css/layui.css ">
+	<script type="text/javascript" src="layui/layui.js"></script>
+	
+	<style type="text/css">
+	*body{
+		width: 100%;
+		height: 1088.22px;
+			
+	}
+    .daohang{
+				width: 100%;
+				height: 55px;
+				border-bottom: 1px solid #F5F5F7;
+				position:  fixed !important;
+				background-color: white;
+				top: 0;
+				z-index: 9999;
+			}
+			.daohang .juzhong{
+				width: 1745px;
+				height: 55px;
+				margin: 0 auto;
+				
+			}
+			.daohang .juzhong .zuo{
+				width: 115px;
+				height: 34px;
+				float: left;
+				
+				margin-left: 17px;
+			}
+			.daohang .juzhong .you{
+				width: 238px;
+				height: 55px;
+				float: right;
+				
+			}
+			.daohang .juzhong .you .saoma{
+				width: 240px;
+				height: 307px;
+				
+				position: fixed;
+				left: 1480px;
+				top: 55px;
+				cursor: pointer;
+				display: none;
+				box-sizing: border-box;
+				box-shadow:  0 1px 5px #DEDEDE;
+				z-index: 9999;
+			}
+			.daohang .juzhong .you .saoma img{
+				width: 160px;
+				height: 160px;
+				margin: 8px 40px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(1){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(2){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+				display: none;
+			}
+			.daohang .juzhong .you .saoma .app{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: white;
+				background-color: red;
+			}
+			.daohang .juzhong .you .saoma .weixin{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: red;
+				
+				
+			}
+			.daohang .juzhong .you a{
+				text-align: center;
+				line-height: 32px;
+				color: red;
+				border-radius: 4px;
+			}
+			.daohang .juzhong .you a:nth-child(1):hover{
+				background-color: red;
+				color: white;
+			}
+			.daohang .juzhong .zhong{
+				width: 530px;
+				height: 55px;
+				float: left;
+				
+				margin-left: 420px;
+			}
+			.daohang .juzhong .zhong ul{
+				width: 530px;
+				height: 55px;
+				text-align: center;
+			}
+			.daohang .juzhong .zhong ul li{
+				float: left;
+				line-height: 56px;
+				font-size: 15px;
+				margin-right: 47px;
+				cursor: pointer;
+				color: #2E2D3C;
+			}
+			.daohang .juzhong .zhong ul li:hover{
+				color: red;
+			}
+     nav{
+     	width: 100%;
+     	height: 56px;
+     	background: #FFF;
+     	border-bottom: 1px solid black;
+     }
+     
+     .neirong{
+     	width: 80%;
+     	height: 1088.22px;
+     	background: blue;
+     }
+
+     .left{
+     	width: 271.99px;
+     	height: 713.01px;
+     	background: pink;
+     }
+     .container{
+     	width: 100%;
+     	height: 100%;
+     	background: yellow;
+     }
+
+	</style>
+
+
+
+
+
+	</head>
+
+	
+	<body style="background: #F5F5F7;">
+        	<div class="container" style="width: 100% ;height:1088.2px;background: #F5F5F7;" >
+			 <div class="daohang">
+			<div class="juzhong">
+				<div class="zuo">
+					<div id="">
+						<a href="#"><img style="width: 115px;height: 34px;margin-top: 10px;" src="layui/images/gonglue/new_wondercv_logo_zh-CN.png"/></a>
+					</div>
+				</div>
+				<div class="zhong">
+					<ul>
+						<li  onclick="window.open('moban/index.html','_self')">简历模板</li>
+						<li  onclick="window.open('qzx.html','_self')">求职信</li>
+						<li  onclick="window.open('gonglue.html','_self')">简历攻略</li>
+						<li onclick="window.open('zhenduan.html','_self')">简历诊断</li>
+						<li style="color: red;border-bottom: 2px solid red;height: 55px;box-sizing: border-box;"  onclick="window.open('mingqineiyui.html','_self')">名企推荐</li>
+					</ul>
+				</div>
+				<div class="you"  onmouseover="onm()" onmouseout="out()" >
+					<div onmouseover="onm()" onmouseout="out()" style="float: left;"><img style="cursor: pointer;width: 20px;height: 20px;margin-top: 17px;" src="layui/images/gonglue/shouji.png"/></div>
+					<div class="saoma" id="saoma" >
+						<div id="s1">
+						     扫码下载App 同步编辑
+						</div>
+						<div id="s2">
+						    扫码关注 微信同步
+  
+						</div>
+						<img id="i1" src="layui/images/gonglue/weixin.png"/>
+						<img id="i2" style="display: none;" src="layui/images/gonglue/app.png"/>
+						<div id="app" class="app" onmouseover="onm2()" onmouseout="out2()"  onclick="app()">App</div>
+						<div id="weixin" class="weixin" onmouseover="onm1()" onmouseout="out1()" onclick="weixin()">微信</div>
+					</div>
+					<div style="width: 2px;height: 26px;float: left;border-left: 2px solid #999999;margin-top: 14px;margin-left: 16px;"></div>
+					<div style="height: 32px; float: right;">
+						<a style="width: 80px;height: 32px;display: inline-block;float: left;border: 1px solid red;margin-right: 20px;margin-top: 9px;" href="erweima.html">登陆</a>
+						<a style="width: 80px;height: 32px;display: inline-block;background-color: red;float: right;border: 1px solid red;margin-top: 9px;color: white;" href="erweima.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			   <div class="zhong" style="width: 65%;height: 100%;background: #F5F5F7; margin: auto; margin-top: 80px;">
+				
+				    <div class="left" style="width: 271.99px; height: 713.01px ; background: #F5F5F7; float: left;">
+                            <div class="leftshang" style="width: 271.99px; height: 187.06px; background:yellow;">
+    	                       <div class="leftshangli" style="width:100%; height: 187.06px; background: #F5F5F7; margin: 0 auto; text-align: center; "><div class="leftshanglitu" style="background:#fff;  	 box-sizing: border-box;  height: 150px;  padding: 10px; width: 100%;"><i  margin: 20px;" class="layui-icon  layui-icon-username" style="font-size: 70px;"></i><br><a href="erweima.html" class="layui-btn layui-bg-red">用户登陆</a> </div>
+    	                      		 
+                            </div>
+
+
+                           <div class="leftzhong" style="width: 256px; height: 63px; background: #fff; border-bottom: solid 1px #F5F5F7; margin: 0 auto; border-left: solid 7.995px #fff; border-right:solid 7.995px #fff"><img src="img/zuozhong1.png " style="width: 18px; height: 18px; margin: 20px;"><a href="xiaozhaowangshen.html"><b>内推职位</b></a<b> <i class=" layui-icon  layui-icon-right" style="font-size: 15px; margin: 60px;"></i></div>
+                           <div class="leftzhong" style="width: 256px; height: 63px; background: #fff; border-bottom: solid 1px #F5F5F7; margin: 0 auto; border-left: solid 7.995px #fff; border-right:solid 7.995px #fff"><img src="img/zuozhong2.png " style="width: 18px; height: 18px; margin: 20px;"><a href="erweima.html"> 领英职位</a> <i class=" layui-icon  layui-icon-right" style="font-size: 15px; margin: 60px;"></i></div>
+
+                           <div class="leftzhong" style="width: 256px; height: 63px; background: #fff; border-bottom: solid 1px #F5F5F7; margin: 0 auto; border-left: solid 7.995px #fff; border-right:solid 7.995px #fff"><img src="img/zuozhong3.png " style="width: 18px; height: 18px; margin: 20px;"> <a href="xiaozhaowangshen.html"> 校招网申 </a> <i class=" layui-icon  layui-icon-right" style="font-size: 15px; margin: 60px;"></i></div>
+
+
+                            <div class="leftxia" style="width: 272px; height: 294px; background:#FFF; margin-top: 39.5px; padding-top:30px;  box-sizing: border-box;  box-shadow: 1px 1px 1px 1px #888888;">
+                             
+                                    <div class="leftxiashang" style="width: 272px; height: 22px; background: #fff;  text-align: center;"><b>手机电脑，同步管理</b></div>
+                                    <div class="leftxiazhong" style="width: 272px; height: 20px; background: #fff;  text-align: center;"><p style="color: black;">微信上也可以随时查看、 投递简历 </p></div>
+                                    <img  style="width: 150px; height: 150px; margin:20px; margin-left: 61px;" src="img/leftxiatu.png">
+
+                                    <div class="leftbottom" style="width: 272px; height: 20px; background: #fff; text-align: center;">微信扫码 管理投递</div>
+           
+                            </div>
+
+                    </div>
+
+                  
+			     </div>
+               <div class="rou"  style="width: 900px; height: 986px; background: green; float: left; margin-left: 30px;">
+
+                                        <div class="layui-col-md12">
+                                      <div class="layui-card" style="height: 956px;">
+                                        <div  class="layui-card-header"><span style=" font-size: 15px; padding: 5px;"><a href="">内推职位</a></span><div class="neitui" style="float: right;width: 336px; height: 19px;">以下为热门内推，登录后根据你的简历匹配并推荐职位</div></div>
+
+                                        <div class="layui-card-body" style="padding: 0px;">
+
+                                         <hr class="layui-bg-black" style=" width: 64px; height: 2px; margin: 0; padding: 0; margin-left: 20px; "> </div>
+
+                                         <div class="youli" style="width: 900px; height: 980px;background: #fff; margin: 0 auto; margin-top: 5px;">
+
+                                            <div class="  layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 24px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                   <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="neilianzhiwei.html">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">安信基金 </a></div>
+                                                      
+                                              
+
+
+                                            </div>
+
+
+                                            <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 20px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;" >
+                                                         <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">人力实习生</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">广州 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">碧桂园<br> <span style="font-size: 10px; color: green;">房地产/建筑/物业 | 民营企业 | 500人以上</span></a></div>
+
+
+
+
+
+                                            </div>
+
+
+                                            <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 24px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                        <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">安信基金 </a></div>
+                                                      
+
+
+
+
+                                            </div>
+
+
+                                            <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 20px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                    <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">人力实习生</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">广州 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">碧桂园<br> <span style="font-size: 10px; color: green;">房地产/建筑/物业 | 民营企业 | 500人以上</span></a></div>
+
+
+
+
+
+
+                                            </div>
+
+
+                                           <div   class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 24px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                          <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">安信基金 </a></div>
+                                                      
+
+
+
+
+
+
+                                            </div>
+
+
+                                             <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 20px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                    <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">人力实习生</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">广州 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">碧桂园<br> <span style="font-size: 10px; color: green;">房地产/建筑/物业 | 民营企业 | 500人以上</span></a></div>
+
+
+
+
+
+                                             </div>
+
+
+                                             <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 24px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+                                                        
+
+                                                       <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">安信基金 </a></div>
+                                                      
+
+
+                                             </div>
+
+
+                                             <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 20px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                        <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">人力实习生</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">广州 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">碧桂园<br> <span style="font-size: 10px; color: green;">房地产/建筑/物业 | 民营企业 | 500人以上</span></a></div>
+
+
+
+
+                                                      
+                                                      
+
+
+
+
+
+
+                                             </div>
+
+
+                                             <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 24px; margin-top: 30px; border: solid 1px #F5F5F7; float: left; cursor:pointer;">
+
+                                                       <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com">安信基金 </a></div>
+                                                      
+                                                      
+
+
+
+
+
+                                             </div>
+
+
+                                               <div class="layui-col-xs12" style="width: 418px; height: 144px; background: #fff; margin-left: 20px; margin-top: 30px; border: solid 1px #F5F5F7; cursor:pointer; ">
+
+                                                     <div class="job1" style="width: 260px; height: 18px; margin: 20px; float: left;   padding: 0; border:0"><a href=""><p style="font-size: 18px; margin: 0; padding: 0; border:0;"><a href="www.layui.com">产品部实习生招聘</p></a></div>
+                                                 
+                                                 <div class="jobyou" style="width:  99px; height: 18px; float: left; margin-top: 20px;  text-align: right;"><a href="www.layui.com"><p style="font-size: 18px; color: green;">面议</p></a></div>
+                                                   <p style="width: 181.66px; height: 12px;  color: green; clear: both;   margin-left: 20px;   position: absolute;top: 45px; padding: 0; margin-bottom: 25px; font-size: 10px;"> <a href="www.layui.com">深圳 | 经验不限 | 硕士及以上学历 </a></p><br>
+
+                                                   <a  href="www.layui.com"> <img  src="img/anxinjijin.png" style="width: 43px; height: 43px; padding-top: 4px; padding-bottom:  4px;  position: absolute; left: 20px; top: 80px; border: solid 1px #F5F5F7;"></a>
+                                                   <div class="anxiinjijin" style="width: 316px; height: 14px; float: right; margin: 30px; ;"><a href="www.layui.com"> YY </a></div>
+
+
+
+
+
+
+                                               </div>
+
+
+
+
+
+                                               <button class="layui-btn layui-btn-lg layui-btn-normal " style="width: 852px; height: 47px; margin-left: 24px; margin-top: 20px; background: #fff;
+
+                                                 border: solid red  1px; color: red;">登陆查看你的内推职位</button>
+
+
+
+
+
+
+
+                                         </div>
+                                         
+                                      </div>
+                                    </div>
+
+
+
+
+               </div>
+
+				
+
+			</div>
+         
+               
+		
+
+
+
+
+
+			
+
+
+
+
+	</body>

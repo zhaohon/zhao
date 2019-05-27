@@ -5,14 +5,133 @@
 		<title></title>
 		<link rel="stylesheet" href="layui/css/layui.css">
 		<script src="layui/layui.js" type="text/javascript" charset="utf-8"> </script>
+		<script src="layui/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			*{
 				margin: 0;
 				padding: 0;
 				font-size: 14px;
 			}
+			
 			body{
 				background-color: #fbfbfb !important;
+			}
+			.daohang{
+				width: 100%;
+				height: 55px;
+				border-bottom: 1px solid #F5F5F7;
+				position:  fixed !important;
+				background-color: white;
+				top: 0;
+				z-index: 9999;
+			}
+			.daohang .juzhong{
+				width: 1745px;
+				height: 55px;
+				margin: 0 auto;
+				
+			}
+			.daohang .juzhong .zuo{
+				width: 115px;
+				height: 34px;
+				float: left;
+				
+				margin-left: 17px;
+			}
+			.daohang .juzhong .you{
+				width: 238px;
+				height: 55px;
+				float: right;
+				
+			}
+			.daohang .juzhong .you .saoma{
+				width: 240px;
+				height: 307px;
+				
+				position: fixed;
+				left: 1480px;
+				top: 55px;
+				cursor: pointer;
+				display: none;
+				box-sizing: border-box;
+				box-shadow:  0 1px 5px #DEDEDE;
+				z-index: 9999;
+			}
+			.daohang .juzhong .you .saoma img{
+				width: 160px;
+				height: 160px;
+				margin: 8px 40px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(1){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(2){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+				display: none;
+			}
+			.daohang .juzhong .you .saoma .app{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: white;
+				background-color: red;
+			}
+			.daohang .juzhong .you .saoma .weixin{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: red;
+				
+				
+			}
+			.daohang .juzhong .you a{
+				text-align: center;
+				line-height: 32px;
+				color: red;
+				border-radius: 4px;
+			}
+			.daohang .juzhong .you a:nth-child(1):hover{
+				background-color: red;
+				color: white;
+			}
+			.daohang .juzhong .zhong{
+				width: 530px;
+				height: 55px;
+				float: left;
+				
+				margin-left: 420px;
+			}
+			.daohang .juzhong .zhong ul{
+				width: 530px;
+				height: 55px;
+				text-align: center;
+			}
+			.daohang .juzhong .zhong ul li{
+				float: left;
+				line-height: 56px;
+				font-size: 15px;
+				margin-right: 47px;
+				cursor: pointer;
+				color: #2E2D3C;
+			}
+			.daohang .juzhong .zhong ul li:hover{
+				color: red;
 			}
 			.banner{
 				margin: 0 auto;
@@ -21,6 +140,7 @@
 			 	line-height: 48px;
 			 	color: #404040;
 			 	box-sizing: border-box;
+			 	margin-top: 55px;
 			}
 			.content{
 				width: 1000px;
@@ -31,11 +151,11 @@
 			}
 			.content .tiao{
 				width: 675px;
-				height: 3821px;
-				background-color: #00FF00;
+				height: 3315px;
+				box-shadow:  0 1px 5px #DEDEDE;
 				float: left;
 				box-sizing: border-box;
-				
+				display: none;
 			}
 			.content .tiao .tiaobanner{
 				width: 674px;
@@ -43,24 +163,87 @@
 				box-sizing: border-box;
 				
 			}
+			.content .tiao .tiaobanner img{
+				width: 100%;
+			}
 			.content .tiao .tiaoconnet{
 				width: 674px;
 				height: 3243px;
+				padding: 20px 32px 60px 32px;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con1{
+				width: 610px;
+				height: 110px;
+				
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+			.content .tiao .tiaoconnet .con1 h1{
+				font-size: 33px;
+			}
+			.content .tiao .tiaoconnet .con2{
+				width: 610px;
+				height: 20px;
+				margin-bottom: 40px;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con2 span:nth-child(1){
+				
+				color: #CCCCCC;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con2 span:nth-child(2){
+				color:  #007DDB;
+				margin-left: 20px;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con3{
+				width: 610px;
+				height: 2825px;
+				color:  #4E5465;
+				box-sizing: border-box;
+				
+				
+			}
+			.content .tiao .tiaoconnet .con3 .pfot{
+				width: 610px;
+				height: 30px;
+				margin-top: 50px;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con3 .pfot span:nth-child(1){
+				color: #CCCCCC;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con3 .pfot span:nth-child(2){
+				margin-left: 70px;
+				color: #007DDB;
+				box-sizing: border-box;
+				
+			}
+			.content .tiao .tiaoconnet .con4{
+				width: 610px;
+				height: 400px;
 				
 				box-sizing: border-box;
 				
 			}
 			.content .tiao .tiaobottom{
-				width: 674px;
-				height: 278px;
-				background-color: #00FFFF;
+				
 				box-sizing: border-box;
 				
 			}
 			.content .lt{
 				width: 675px;
 				height: 1657px;
-				display: none;
+				
 				float: left;
 				box-sizing: border-box;
 			}
@@ -256,6 +439,7 @@
 				box-sizing: border-box;
 				border-bottom: 1px solid #F5F5F7;
 				margin-bottom: 15px;
+				
 			}
 			.content .rt .rlist .shang .da .yi .mban{
 				padding:40px 45px;
@@ -264,9 +448,10 @@
 				background-color: #F6F6F6;
 				display: block;
 				box-sizing: border-box;
+				display: none;
 			}
 			.content .rt .rlist .shang .da .yi:hover{
-				
+				display: block;
 			}
 			.content .rt .rlist .shang .da .yi:hover .ys{
 				display: none;
@@ -406,7 +591,38 @@
 				height: 40px;
 				
 			}
-			
+			.content .rt .rlist .remenwenzhang{
+				width: 320px;
+				height: 470px;
+				box-shadow:  0 1px 5px #DEDEDE;
+				margin-top: 18px;
+				display: none;
+			}
+			.content .rt .rlist .remenwenzhang thead{
+				width: 320px;
+				height: 52px;
+				text-align: left;
+			}
+			.content .rt .rlist .remenwenzhang thead tr th{
+				width: 289px;
+				height: 36px;
+				padding: 8px 16px 8px 15px;
+			}
+			.content .rt .rlist .remenwenzhang tbody{
+				width: 320px;
+				height: 360px;
+				
+			}
+			.content .rt .rlist .remenwenzhang tbody tr td{
+				width: 289px;
+				height: 20px;
+				padding: 8px 16px 8px 15px;
+				
+			}
+			.content .rt .rlist .remenwenzhang tbody tr:nth-of-type(odd){
+				background-color: #F5F5FB !important;
+				
+			}
 			.content .rt .rlist .xia{
 				margin: 10px 0 0 0;
 				width: 320px;
@@ -446,24 +662,312 @@
 				
 				
 			}
+			.content .rt .rlist .tanchu{
+				width: 1874px;
+				height: 100%;
+				background-color: rgba(0,0,0,0.3);
+				position: fixed;
+				left: 0;
+				top: 0;
+				display: none;
+			}
+			@keyframes myfirst
+				{
+				from {margin-top: -200px;}
+				to {margin-top: 100px;}
+				}
+			.content .rt .rlist .tanchu .tanchukuang{
+				width: 1040px;
+				height: 764px;
+				
+				margin: 100px auto;
+				text-align: center;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .jianting{
+				width: 500px;
+				height: 679px;
+				margin: 0 auto;
+				margin-left: 205px;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .guanbi{
+				display: block;
+				margin-left: 480px;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .btn{
+				width: 120px;
+				height: 36px;
+				
+				position: relative;
+				background-color: #ff4f4c !important;
+				border-radius: 5px;
+				top: -410px;
+				left: 187px;
+				display: none;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .btn>a{
+				width: 120px;
+				line-height: 36px;
+				color: white;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .jianting:hover{
+				
+			}
+			.content .rt .rlist .tanchu .tanchukuang .jianting:hover .btn{
+				display: block;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .jianting:hover {
+				display: block;
+			}
+			.content .rt .rlist .tanchu .tanchukuang .jianting:hover img{
+				
+			}
+			.dbxz ul li {
+				margin-bottom: 12px;
+				color: #404040;
+			}
+			
+			.dbxz ul .dbwztx {
+				margin-bottom: 16px;
+			}
+			
+			.dbxz ul .dbwztx a {
+				color: #9B9B9B;
+			}
+			
+			.dbwzl1,
+			.dbwzl2,
+			.dbwzl3,			
+			.dbwzl5 {
+				padding: 0 15px;
+				width: 16.6666666667%;
+			}
+			
+			.dbwzl4{
+				padding: 0 15px;
+				width: 25%;
+			}
+			
+			.dbwzba1 {
+				width: 100%;
+				text-align: center;
+				color: #9B9B9B;
+				font-size: 13px;
+			}
+			.tu img{
+				position: relative;
+				top: 30px;
+				left: -120px;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="daohang">
+			<div class="juzhong">
+				<div class="zuo">
+					<div id="">
+						<a href="#"><img style="width: 115px;height: 34px;margin-top: 10px;" src="layui/images/gonglue/new_wondercv_logo_zh-CN.png"/></a>
+					</div>
+				</div>
+				<div class="zhong">
+					<ul>
+						<li  onclick="window.open('moban/index.html','_self')">简历模板</li>
+						<li  onclick="window.open('qzx.html','_self')">求职信</li>
+						<li  onclick="window.open('gonglue.html','_self')"  style="color: red;border-bottom: 2px solid red;height: 55px;box-sizing: border-box;">简历攻略</li>
+						<li onclick="window.open('zhenduan.html','_self')">简历诊断</li>
+						<li  onclick="window.open('mingqineiyui.html','_self')">名企推荐</li>
+					</ul>
+				</div>
+				<div class="you"  onmouseover="onm()" onmouseout="out()" >
+					<div onmouseover="onm()" onmouseout="out()" style="float: left;"><img style="cursor: pointer;width: 20px;height: 20px;margin-top: 17px;" src="layui/images/gonglue/shouji.png"/></div>
+					<div class="saoma" id="saoma" >
+						<div id="s1">
+						     扫码下载App 同步编辑
+						</div>
+						<div id="s2">
+						    扫码关注 微信同步
+  
+						</div>
+						<img id="i1" src="layui/images/gonglue/weixin.png"/>
+						<img id="i2" style="display: none;" src="layui/images/gonglue/app.png"/>
+						<div id="app" class="app" onmouseover="onm2()" onmouseout="out2()"  onclick="app()">App</div>
+						<div id="weixin" class="weixin" onmouseover="onm1()" onmouseout="out1()" onclick="weixin()">微信</div>
+					</div>
+					<div style="width: 2px;height: 26px;float: left;border-left: 2px solid #999999;margin-top: 14px;margin-left: 16px;"></div>
+					<div style="height: 32px; float: right;">
+						<a style="width: 80px;height: 32px;display: inline-block;float: left;border: 1px solid red;margin-right: 20px;margin-top: 9px;" href="erweima.html">登陆</a>
+						<a style="width: 80px;height: 32px;display: inline-block;background-color: red;float: right;border: 1px solid red;margin-top: 9px;color: white;" href="erweima.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="banner">
 			<span class="layui-breadcrumb" lay-separator=">">
-			  <a href="">首页</a>
+			  <a href="超级简历.html">首页</a>
 			  <a href="">简历攻略</a>
 			  <a><cite>推荐</cite></a>
 			</span>
 			
 		</div>
 		<div class="content">
-			<div class="tiao">
+			<div class="tiao" id="tiao">
 				<div class="tiaobanner"><img src="layui/images/gonglue/lunbo1.jpeg"/></div>
-				<div class="tiaoconnet"></div>
+				<div class="tiaoconnet">
+					<div class="con1">
+						<h1>2019 春招求职礼包大放送 | 各行业笔试面经</h1>
+					</div>
+					<div class="con2">
+						<span>2019-2-22 18:08:00</span>
+						<span>超级简历</span>
+					</div>
+					<div class="con3">
+						<p> <br /> </p>
+						<p style="text-align: center;"> 错过秋招的你</p>
+						<p style="text-align: center;">一定要把握好春招</p>
+						<p  style="text-align: center;">因为这是毕业前</p>
+						<p style="text-align: center;">最后一次进入理想公司的机会</p>
+						<p><br></p>
+						<p style="text-align: center;">超级简历为你备好了 </p>
+						<p style="text-align: center;">"【"<b>春招全攻略</b>"】" </p>
+						<p><br></p>
+						<p style="text-align: center;">2019 最新各行业面试经验总结</p>
+						<p style="text-align: center;">300+ 公司笔试含答案真题</p>
+						<p style="text-align: center;">四大、银行、互联网大厂 2018 真题</p>
+						<p style="text-align: center;">1000+ 份行研分析报告</p>
+						<p><br></p>
+						<p style="text-align: center;">帮你求职前做好充分准备，</p>
+						<p style="text-align: center;">赶快收藏领取，</p>
+						<p style="text-align: center;">申请你心仪的公司吧！</p>
+						<p><br></p>
+						<p style="text-align: center;"><b>获取方式 &nbsp;</b></p>
+						<p><br></p>
+						<p style="text-align: center;">"➀ 关注 "<b>超级简历WonderCV </b></p>
+						<p><br></p>
+						<p style="text-align: center;"><img src="layui/images/gonglue/erweima.png"/></p>
+						<p><br></p>
+						<p style="text-align: center;">"➁ 回复："<b>春招 &nbsp;</b></p>
+						<p style="text-align: center;">"即可领取"<b>春招大礼包</b></p>
+						<p><br></p>
+						<p><br></p>
+						<p style="text-align: center;"><img style="width: 378px;" src="layui/images/gonglue/ex.jpg"/></p>
+						<p style="text-align: center;"><img style="width: 378px;" src="layui/images/gonglue/ex.jpg"/></p>
+						<p><br></p>
+						<p><br></p>
+						<p style="text-align: center;">"➂ 回复："b大牛简历</p>
+						<p style="text-align: center;">即可查看已经进入名企大厂同学的简历！</p>
+						<p><br></p>
+						<p style="text-align: center;">预祝拿到资料同学们都顺利收到心仪 Offer！</p>
+						<p><br></p>
+						<p style="text-align: center;">🌟🌟🌟</p>
+						<p><br></p>
+						<p style="text-align: center;">都说春招竞争激烈，却没有人告诉过你到底应该怎么办？</p>
+						<p><br></p>
+						<p><b>一、什么是春招？</b></p>
+						<p><br></p>
+						<p>春招，是针对应届生的最后一次校招机会。秋招失利、错过秋招、考研失败的同学可以申请春招。“春招”是由于“秋招”没有招满，需要继续补充，而产生的。而这个时候一般是在来年的 3 月，故称“春招”。</p>
+						<p><br></p>
+						<p><b>二、春招有哪些特点？</b></p>
+						<p><br></p>
+						<p><b>岗位需求少：</b>正所谓是补招，所以相对秋招，春招的岗位少的可怜，几乎是秋招的 30%！</p>
+						<p><b>持续时间短：</b>因为岗位需求少，所以春招很快结束，基本招满了就会停止。</p>
+						
+						<p><b>竞争压力大：</b>大批留学生、考研、考公大军加入，而岗位相比春招大大减少，“僧多粥少”。</p>
+						<p><b>最后一次机会</b>：对于 2019 届应届生来说。错过秋招，失利春招，2019 年下半年开始，你将不再是应届生身份，要进好公司就要和社会招聘资源竞争，而社会招聘大多要求人才有丰富的岗位经验和行业人脉，对初入社会的应届生特别不友好。</p>
+						<p><br></p>
+						<p><b>三、如何提高网申通过率</b></p>
+						<p><br></p>
+						<p>  &nbsp;&nbsp; 1.做到目标研究透彻</p>
+						<p><br></p>
+						<p>“磨刀不误砍柴工”，对于企业文化、核心业务、中国分公司发展（外企）等情况的了解，有助于答题能更好地契合企业要求。</p>
+						
+						<p><br></p>
+						<p>另外，网站的风格、用词、职位描述等能提供你一些线索，如关于应聘职位要求的基本素质、对方惯用的专业语言等。 </p>
+						<p><br></p>
+						<p><b>  &nbsp;&nbsp;     2.仔细准备好简历</b></p>
+						<p><br></p>
+						<p>网申最主要的就是筛选简历，一定要在开始大范围申请之前就准备好。因为在你一个接一个需要准备笔试、面试的时候，不会再有时间去改简历了。</p>
+						<p><br></p>
+						<p>对自己简历没信心的同学直接去用超级简历在线制作吧，还可以一键翻译成英文，做出双语简历。完成后记得导入到超级简历在手机上备份一个，手机上就随时可以修改投递。</p>
+						<p><br></p>
+						<p><b>   &nbsp;&nbsp;   3.优化开放性问题答案</b></p>
+						<p><br></p>
+						<p>网申中最需要注意的就是开放性问题，需要回答得比较积极，最好能够通过举例来阐述你自己所具有的优秀品质，而你所展现出的这些品质又是能与企业的文化契合的。</p>
+						<p><br></p>
+						<p>尽量利用所给的字数限制，既不要超出也不要太少。一般来说，注明需要用 300 字来回答的问题，你只写了 100 字恐怕是很难符合要求的。</p>
+						<p><br></p>
+						<p><b>   &nbsp;&nbsp;   4.仔细检查文本细节</b></p>
+						<p><br></p>
+						<p> 千万别犯低级错误，注意拼写、语法、标点等细节问题。 一般大公司都较注重专业精神，出现细节错误，直接体现出你要么不够重视，要么就是不够专业。因为这种小错误而失去机会就太可惜了。</p>
+						<p><br></p>
+						<p><b>   &nbsp;&nbsp;  5. 不要乱投职位</b></p>
+						<p><br></p>
+						<p> 投递多各个岗位一定要特别慎重。</p>
+						<p><br></p>
+						<p> 很多公司都会注明投递上限的职位数，如果没有说明的话，一般选择 1-2 个类似岗位，不要超过 3 个。 HR 在后台是可以看到你都申请了哪些职位的，如果你同时选了很多不同类型的职位，就会给人“乱投医”，不专业的感觉。</p>
+						<p><br></p>
+						<p> 而且专注一两个类似岗位可以让你的简历和网申资料都更具针对性，更可能覆盖那些重要的关键字，和所申请职位的匹配。</p>
+						<p><br></p>
+						<p>  &nbsp;&nbsp;  <b> 6.记录网申进度，实时监控</b></p>
+						<p><br></p>
+						<p> 当你脑海中有一个大概想要投递的公司清单，一定要找一个地方把进度记下来。</p>
+						<p>很多人会用 Excel 做记录。但 Excel 需要自己一点一点收集资料，一个个填，而且只能在电脑上编辑，很不方便。</p>
+						<p><br></p>
+						<p style="text-align: center;">                      ❤️❤️❤️</p>
+						<p><br></p>
+						<p>最后祝 2019 届的应届生同学们，都拿到心仪 Offer!</p>
+						<div class="pfot">
+							<span>阅读&nbsp; 56905</span>
+							<span>
+								<i class="layui-icon-share
+ layui-icon"></i> &nbsp;
+								 分享
+							</span>
+						</div>
+						
+						
+					</div>
+					<div class="con4">
+						<div style="margin: 50px 0;border-bottom: 1px solid #CCCCCC; width: 100%;height: 40px;box-sizing: border-box;">
+							
+					            <div style="float: left;" class="">
+					              <a class="" href="">上一篇：2019年春招形势如何？应届生如何应对春招</a>
+					            </div>
+					            <div style="float: right;" class="">
+					              <a class="" style="text-align: right;" href="">下一篇：普通的个人简历怎么写？</a>
+					            </div>
+					         
+						</div>
+						<div style="color: #9C9C9C;">
+							<div class="jobs" style="font-size: 14px;line-height: 20px;">
+				              <div class="class" style="margin: 20px 0;">
+				                <a href="" style="color: #9C9C9C;">超级内推职位</a>
+				                <a href="" style="float: right;color: #9C9C9C;">more&gt;&gt;</a>
+				              </div >
+				                <a style="margin: 20px 0;" href="">产品部实习生招聘</a>
+				                <a style="margin: 20px 0;" href="">人力实习生</a>
+				                <a style="margin: 20px 0;" href="">Tech Writer（PM）实习生</a>
+				                <a style="margin: 20px 0;" href="">Java实习生</a>
+				                <a style="margin: 20px 0;" href="">2019年多岗位招聘</a><br />
+				                <a style="margin: 20px 0;" href="">2019年暑期实习生</a>
+				                <a style="margin: 20px 0;" href="">智能计算实验室实习生</a>
+				                <a style="margin: 20px 0;" href="">智能计算实验室实习生</a>
+				                <a style="margin: 20px 0;" href="">微信小游戏平台自研游戏引擎实习生</a>
+				                <a style="margin: 20px 0;" href="">2019届博士招募</a>
+				                <a style="margin: 20px 0;" href="">电子实习生</a>
+				                <a style="margin: 20px 0;" href="">运营负责人</a>
+				                <a style="margin: 20px 0;" href="">Tech Writer（PM）实习生</a>
+				                <a style="margin: 20px 0;" href="">权益拓展 Benefit Development实习生</a>
+				                <a style="margin: 20px 0;" href="">不动产投资部实习生</a>
+				            <div style="margin-top: 24px;">
+				              大学生简历、实习简历模板、英文简历模板、个人简历模板免费下载，大牛简历范文参考，尽在超级简历，名企HR推荐智能简历制作工具！
+				            </div>
+				          </div>
+						</div>
+					</div>
+				</div>
 				<div class="tiaobottom"></div>
 			</div>
-			<div class="lt">
+			<div class="lt" id="lt">
 				<div class="lunbo" style="box-sizing: border-box;">
 					<div class="layui-carousel" id="test1" style="box-sizing: border-box;">
 					  <div carousel-item style="box-sizing: border-box;">
@@ -491,8 +995,8 @@
 						  <div class="layui-tab-content"></div>
 						</div>   
 					</div>
-					<div class="zhongcontent">
-						<a href="">
+					<div class="zhongcontent" onclick="tiao()">
+						<a href="#">
 							<img src="layui/images/gonglue/con1.png" alt="" />
 							<div class="kuang">
 								<h2>2019 春招求职礼包大放送 | 各行业笔试面经</h2>
@@ -504,7 +1008,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con2.jpg" alt="" />
 							<div class="kuang">
 								<h2>干货 | 简历上的哪些内容才是HR眼中的干货？</h2>
@@ -518,7 +1022,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con3.png" alt="" />
 							<div class="kuang">
 								<h2>简历到底怎么写 | 如何告别“废话”和“写不出来”？</h2>
@@ -531,7 +1035,7 @@
 									<span class="spanr"><i class=""><img src="layui/images/gonglue/eye.png"/></i>&nbsp;&nbsp;56699</span>								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con4.jpg" alt="" />
 							<div class="kuang">
 								<h2>知乎精选 | 大学生如何写好简历</h2>
@@ -545,7 +1049,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con5.jpg" alt="" />
 							<div class="kuang">
 								<h2>毕业生福利 | 500 张 299元论文查重代金券免费领！</h2>
@@ -559,7 +1063,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con6.jpeg" alt="" />
 							<div class="kuang">
 								<h2>名企内推 | 超级简历带你走进“内推”</h2>
@@ -573,7 +1077,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con7.jpeg" alt="" />
 							<div class="kuang">
 								<h2>金三银四即将到来，如何在短时间内成功跳槽？</h2>
@@ -587,7 +1091,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="">
+						<a href="#">
 							<img src="layui/images/gonglue/con8.jpeg" alt="" />
 							<div class="kuang">
 								<h2>2019跳槽季，在找工作时有什么可以注意的地方？</h2>
@@ -619,13 +1123,29 @@
 					</form>
 				</div>
 				<div class="rlist" >
+					<div class="tanchu" id="tanchu">
+						<div class="tanchukuang" id="tanchukuang">
+							<div class="jianting" id="jianting" onmouseout="out()" onmouseover="onm()">
+								
+								
+								<a class="guanbi" href="#"><img  onclick="guanbi()" src="layui/images/gonglue/x.png"/></a>
+								<img style="width: 500px;height: 679px; " src="layui/images/gonglue/tu.png"/>
+								<div class="btn">
+									<a href="">使用模板</a>
+								</div>
+							</div>
+						</div>
+											
+					</div>
 					<div class="shang">
 						<a href="">超级简历模板</a>
 						<div class="da">
 							<div class="yi">
 								<div class="mban">
-									<div> <a href="">中文模板</a></div>
-									<div> <a href="">英文模板</a></div>
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
 								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y1.png"/></div>
@@ -637,6 +1157,12 @@
 								<div class="yx">此模板适用于学生找实习，第一次工作，没有实习经历的同学</div>
 							</div>
 							<div class="yi">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y2.png"/></div>
 									<div class="yy">
@@ -647,6 +1173,12 @@
 								<div class="yx">此模板适用于学生找实习或全职工作，有一定实习经历的同学</div>
 							</div>
 							<div class="yi">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y2.png"/></div>
 									<div class="yy">
@@ -657,6 +1189,12 @@
 								<div class="yx">此模板适用于工作经验一年以上，想要变动工作的人士，适用于全行业</div>
 							</div>
 							<div class="yi">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y4.png"/></div>
 									<div class="yy">
@@ -667,6 +1205,12 @@
 								<div class="yx">此模板适用于寻求投行，咨询，四大或外企工作岗位的人士</div>
 							</div>
 							<div class="yi">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y5.png"/></div>
 									<div class="yy">
@@ -677,6 +1221,12 @@
 								<div class="yx">此模板适用于申请互联网行业的产品相关岗位，有针对性的模块和引导</div>
 							</div>
 							<div class="yi">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
 									<div class="yz"><img src="layui/images/gonglue/y6.png"/></div>
 									<div class="yy">
@@ -687,7 +1237,14 @@
 								<div class="yx">此模板适用于互联网行业的程序员和技术求职者找全职工作、跳槽时使用</div>
 							</div>
 							<div class="yi" style="border: none;">
+								<div class="mban">
+									<div> <a href="#"  onclick="dakai()">中文模板</a>
+										
+									</div>
+									<div> <a href="#"  onclick="dakai()">英文模板</a></div>
+								</div>
 								<div class="ys">
+									
 									<div class="yz"><img src="layui/images/gonglue/y7.png"/></div>
 									<div class="yy">
 										<h3>留学英文简历模板</h3>
@@ -726,7 +1283,66 @@
 							
 						</div>
 					</div>
-					<div class="xia">
+					<div class="remenwenzhang" id="remenwenzhang">
+						<table class="table table-striped recommand-job">
+				            <thead>
+				              <tr><th>相关推荐</th>
+				            </tr></thead>
+				            <tbody>
+				                <tr>
+				                  <td>
+				                    <a href="">简历投递与面试的最佳时间</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">简历投递渠道以及简历投递方式</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">资深HR亲授：怎样投简历会有回复</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">Email投递简历要注意什么？</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">求职信写作小诀窍</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">大四了要注意什么|致毕业生：大学最后一年求职时刻表</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">投简历选对时间，让你面试几率增加一倍！</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">想快速收到面试通知，简历投递的正确姿势是什么？</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">提高简历投递通过率的3大窍门</a>
+				                  </td>
+				                </tr>
+				                <tr>
+				                  <td>
+				                    <a href="">直接投递简历给HR，大学生像这样发邮件，石沉大海是必然！</a>
+				                  </td>
+				                </tr>
+				            </tbody>
+				          </table>
+					</div>
+					<div class="xia" onclick="window.open('zhenduan.html','_self')">
 						<div class="chaoji">超级简历辅导</div>
 						<div class="con">
 							<div class="shang "><img src="layui/images/gonglue/fudao.png"/></div>
@@ -737,9 +1353,131 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
+		<div class="" style="background-color:#fbfbfb; padding-top: 38px;">
+
+			<div class="layui-row" style=" width: 60%; margin: 0 auto;">
+				
+				<div class="tu" style="">
+					<img style="width: 120px;" src="layui/images/cjjldbwzlogo.png" />
+				</div>
+				
+				<div class="layui-col-md12 dbxz" style="display: flex; justify-content: center; padding: 0 15px; width: 100%;">
+					<div class="dbwzl1">
+						<ul>
+							<li class="dbwztx">
+								<a href="">联系我们</a>
+							</li>
+							<li>
+								<a href="">在线客服</a>
+							</li>
+							<li>
+								<a href="">微信</a>
+							</li>
+							<li>
+								<a href="">微博</a>
+							</li>
+							<li>
+								<a href="">知乎</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dbwzl2">
+						<ul>
+							<li class="dbwztx">
+								<a href="">关于我们</a>
+							</li>
+							<li>
+								<a href="">产品介绍</a>
+							</li>
+							<li>
+								<a href="">使用条款</a>
+							</li>
+							<li>
+								<a href="">隐私协议</a>
+							</li>
+							<li>
+								<a href="">加入我们</a>
+							</li>
+							<li>
+								<a href="">网站地图</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dbwzl3">
+						<ul>
+							<li class="dbwztx">
+								<a href="">快速进入</a>
+							</li>
+							<li>
+								<a href="">首页</a>
+							</li>
+							<li>
+								<a href="">我的简历</a>
+							</li>
+							<li>
+								<a href="">简历攻略</a>
+							</li>
+							<li>
+								<a href="">导师辅导</a>
+							</li>
+							<li>
+								<a href="">职位列表</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dbwzl4">
+						<ul>
+							<li class="dbwztx">
+								<a href="">简历模板</a>
+							</li>
+							<li>
+								<a href="">学生简历模板</a>
+							</li>
+							<li>
+								<a href="">英文简历模板</a>
+							</li>
+							<li>
+								<a href="">程序员简历模板</a>
+							</li>
+							<li>
+								<a href="">经典工作简历</a>
+							</li>
+							<li>
+								<a href="">春招礼包</a>
+							</li>
+						</ul>
+					</div>
+					<div class="dbwzl5">
+						<ul>
+							<li class="dbwztx">
+								<a href="">其他产品</a>
+							</li>
+							<li>
+								<a href="">下载 App</a>
+							</li>
+							<li>
+								<a href="">微信小程序</a>
+							</li>
+							<li>
+								<a href="">大牛简历</a>
+							</li>
+							<li>
+								<a href="">微信名片</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dbwzba" style="padding-top: 36px;padding-bottom: 40px;">
+				<div class="dbwzba1">
+					©2019超级简历 WonderCV wondercv.com | 京ICP备17055181号
+				</div>
+			</div>
+			
+			
+		</div>
 		
 		
 		
@@ -748,6 +1486,93 @@
 		
 		
 		<script type="text/javascript">
+			function guanbi () {
+				
+				var tanchu =document.getElementById("tanchu");
+				tanchu.style.display="none";
+				
+			}
+			function tiao () {
+				
+				var tiao =document.getElementById("tiao");
+				var lt =document.getElementById("lt");
+				var remenwenzhang =document.getElementById("remenwenzhang");
+				tiao.style.display="block";
+				lt.style.display="none";
+				remenwenzhang.style.display="block";
+				
+			}
+			function onm () {
+				var saoma =document.getElementById("saoma");
+				console.log("123");
+				saoma.style.display="block";
+				
+			}
+			function out () {
+				var saoma =document.getElementById("saoma");
+				console.log("123");
+				saoma.style.display="none";
+			
+			}
+			function onm1 () {
+				
+				var weixin =document.getElementById("weixin");
+				weixin.style.cssText="background-color: red;color: white;"
+			}
+			function out1 () {
+				
+				var weixin =document.getElementById("weixin");
+				weixin.style.cssText="background-color: white;color: red;"
+			}
+			function onm2 () {
+				
+				var app =document.getElementById("app");
+				app.style.cssText="background-color: red;color: white;"
+			}
+			function out2 () {
+			
+			}
+			
+			function weixin () {
+				var s1 =document.getElementById("s1");
+				s1.style.display="none";
+				var s2 =document.getElementById("s2");
+				s2.style.display="block";
+				var i1 =document.getElementById("i1");
+				i1.style.display="none";
+				var i2 =document.getElementById("i2");
+				i2.style.display="block";
+				var app =document.getElementById("app");
+				app.style.cssText="background-color: white;color: red;";
+				var weixin =document.getElementById("weixin");
+				weixin.style.cssText="background-color: red;color: white;"
+				
+			}
+			function app () {
+				var s1 =document.getElementById("s1");
+				s1.style.display="block";
+				var s2 =document.getElementById("s2");
+				s2.style.display="none";
+				var i1 =document.getElementById("i1");
+				i1.style.display="block";
+				var i2 =document.getElementById("i2");
+				i2.style.display="none";
+				var app =document.getElementById("app");
+				app.style.cssText="background-color: red;color: white;";
+				var weixin =document.getElementById("weixin");
+				weixin.style.cssText="background-color: white;color: red;"
+				
+			}
+			function dakai () {
+				var tanchu =document.getElementById("tanchu");
+				tanchu.style.display="block";
+				var tanchukuang =document.getElementById("tanchukuang");
+				tanchukuang.style.cssText="animation:myfirst linear 0.2s;"
+			}
+		</script>
+		
+		<script type="text/javascript">
+			
 			
 			layui.use(['element'], function(){
 			  var element = layui.element; //获得laydate模块

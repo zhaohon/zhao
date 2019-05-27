@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="layui/css/layui.css ">
+	<script type="text/javascript" src="layui/layui.js"></script>
+	
+	<style type="text/css">
+	*body{
+		width: 100%;
+		height: 1088.22px;
+			
+	}
+	
+		.daohang{
+				width: 100%;
+				height: 55px;
+				border-bottom: 1px solid #F5F5F7;
+				position:  fixed !important;
+				background-color: white;
+				top: 0;
+				z-index: 9999;
+			}
+			.daohang .juzhong{
+				width: 1745px;
+				height: 55px;
+				margin: 0 auto;
+				
+			}
+			.daohang .juzhong .zuo{
+				width: 115px;
+				height: 34px;
+				float: left;
+				
+				margin-left: 17px;
+			}
+			.daohang .juzhong .you{
+				width: 238px;
+				height: 55px;
+				float: right;
+				
+			}
+			.daohang .juzhong .you .saoma{
+				width: 240px;
+				height: 307px;
+				
+				position: fixed;
+				left: 1480px;
+				top: 55px;
+				cursor: pointer;
+				display: none;
+				box-sizing: border-box;
+				box-shadow:  0 1px 5px #DEDEDE;
+				z-index: 9999;
+			}
+			.daohang .juzhong .you .saoma img{
+				width: 160px;
+				height: 160px;
+				margin: 8px 40px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(1){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+			}
+			.daohang .juzhong .you .saoma div:nth-child(2){
+				width: 239px;
+				height: 20px;
+				color: #404040;
+				text-align: center;
+				margin-top: 12px;
+				line-height: 20px;
+				display: none;
+			}
+			.daohang .juzhong .you .saoma .app{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: white;
+				background-color: red;
+			}
+			.daohang .juzhong .you .saoma .weixin{
+				width: 160px;
+				height: 30px;
+				border: 1px solid red;
+				margin: 12px 40px 0 40px;
+				text-align: center;
+				line-height: 30px;
+				color: red;
+				
+				
+			}
+			.daohang .juzhong .you a{
+				text-align: center;
+				line-height: 32px;
+				color: red;
+				border-radius: 4px;
+			}
+			.daohang .juzhong .you a:nth-child(1):hover{
+				background-color: red;
+				color: white;
+			}
+			.daohang .juzhong .zhong{
+				width: 530px;
+				height: 55px;
+				float: left;
+				
+				margin-left: 420px;
+			}
+			.daohang .juzhong .zhong ul{
+				width: 530px;
+				height: 55px;
+				text-align: center;
+			}
+			.daohang .juzhong .zhong ul li{
+				float: left;
+				line-height: 56px;
+				font-size: 15px;
+				margin-right: 47px;
+				cursor: pointer;
+				color: #2E2D3C;
+			}
+			.daohang .juzhong .zhong ul li:hover{
+				color: red;
+			}
+
+     nav{
+     	width: 100%;
+     	height: 56px;
+     	background: #FFF;
+     	border-bottom: 1px solid black;
+     }
+     
+     .neirong{
+     	width: 80%;
+     	height: 1088.22px;
+     	background: blue;
+     }
+
+     .left{
+     	width: 271.99px;
+     	height: 713.01px;
+     	background: pink;
+     }
+     .container{
+     	width: 100%;
+     	height: 100%;
+     	background: yellow;
+     }
+
+
+    .rightxia2{
+      display: none;
+    }
+
+    .xia:hover .rightxia1{
+      display: none;
+
+    }
+
+     .xia:hover .rightxia2{
+      display: block;
+      
+    }
+
+
+
+
+     .tanchu1{
+        width: 1000px;
+        height: 1000px;
+        background-color: rgba(0,0,0,0.3);
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      @keyframes myfirst
+        {
+        from {margin-top: -200px;}
+        to {margin-top: 100px;}
+        }
+       .tanchu1 .tanchukuang1{
+        width: 1040px;
+        height: 764px;
+        
+        margin: 100px auto;
+        text-align: center;
+      }
+       .tanchu1 .tanchukuang1 .jianting1{
+        width: 500px;
+        height: 679px;
+        margin: 0 auto;
+        margin-left: 205px;
+      }
+       .tanchu1 .tanchukuang1 .guanbi1{
+        display: block;
+        margin-left: 480px;
+      }
+       .tanchu1 .tanchukuang1 .btn1{
+        width: 120px;
+        height: 36px;
+        
+        position: relative;
+        background-color: #ff4f4c !important;
+        border-radius: 5px;
+        top: -410px;
+        left: 187px;
+        display: none;
+      }
+       .tanchu1 .tanchukuang1 .btn>a{
+        width: 120px;
+        line-height: 36px;
+        color: white;
+      }
+       .tanchu1 .tanchukuang1 .jianting1:hover{
+        
+      }
+       .tanchu1 .tanchukuang1 .jianting1:hover .btn{
+        display: block;
+      }
+       .tanchukuang1 .jianting1:hover {
+        display: block;
+      }
+      .tanchukuang1 .jianting1:hover img{
+        
+      }
+	</style>
+
+
+
+
+
+
+	</head>
+
+	
+	<body style="background: #F5F5F7;">
+        	<div class="container" style="width: 100% ;height:1088.2px;background: #F5F5F7;" >
+			<div class="daohang">
+			<div class="juzhong">
+				<div class="zuo">
+					<div id="">
+						<a href="#"><img style="width: 115px;height: 34px;margin-top: 10px;" src="layui/images/gonglue/new_wondercv_logo_zh-CN.png"/></a>
+					</div>
+				</div>
+				<div class="zhong">
+					<ul>
+						<li  onclick="window.open('moban/index.html','_self')">简历模板</li>
+						<li  onclick="window.open('qzx.html','_self')">求职信</li>
+						<li  onclick="window.open('gonglue.html','_self')">简历攻略</li>
+						<li onclick="window.open('zhenduan.html','_self')">简历诊断</li>
+						<li style="color: red;border-bottom: 2px solid red;height: 55px;box-sizing: border-box;"  onclick="window.open('mingqineiyui.html','_self')">名企推荐</li>
+					</ul>
+				</div>
+				<div class="you"  onmouseover="onm()" onmouseout="out()" >
+					<div onmouseover="onm()" onmouseout="out()" style="float: left;"><img style="cursor: pointer;width: 20px;height: 20px;margin-top: 17px;" src="layui/images/gonglue/shouji.png"/></div>
+					<div class="saoma" id="saoma" >
+						<div id="s1">
+						     扫码下载App 同步编辑
+						</div>
+						<div id="s2">
+						    扫码关注 微信同步
+  
+						</div>
+						<img id="i1" src="layui/images/gonglue/weixin.png"/>
+						<img id="i2" style="display: none;" src="layui/images/gonglue/app.png"/>
+						<div id="app" class="app" onmouseover="onm2()" onmouseout="out2()"  onclick="app()">App</div>
+						<div id="weixin" class="weixin" onmouseover="onm1()" onmouseout="out1()" onclick="weixin()">微信</div>
+					</div>
+					<div style="width: 2px;height: 26px;float: left;border-left: 2px solid #999999;margin-top: 14px;margin-left: 16px;"></div>
+					<div style="height: 32px; float: right;">
+						<a style="width: 80px;height: 32px;display: inline-block;float: left;border: 1px solid red;margin-right: 20px;margin-top: 9px;" href="erweima.html">登陆</a>
+						<a style="width: 80px;height: 32px;display: inline-block;background-color: red;float: right;border: 1px solid red;margin-top: 9px;color: white;" href="erweima.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+                              <span style="margin-left: 370px;display: inline-block;margin-top: 60px;   position: relative;  top: 20px;" class="layui-breadcrumb" lay-separator=">">
+                          <a href="">投递管理</a>
+                          <a href="">名企内推</a>
+                          <a href="">校园招聘</a>
+                          
+                        </span>
+
+                        <script>
+layui.use('element', function(){
+  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+
+
+
+
+               <div  style="width: 1112px; height: 76px; padding: 34px; margin: 0 auto; margin-bottom: 30px; background: #fff; margin-top: 30px;" class="layui-row "> 
+
+                    <div style="width: 800; height: 76px;  padding: 0; background: #fff; " class="topleft">
+
+                         <div style="width: 780px; height: 76px;  background: #fff; border-right: solid 1px black; float: left;  " class="topleftli">
+
+                              <h1>供应链管理实习生【可转正】</h1>
+                              <br>
+                              <p style="font-size: 16px;">深圳|经验不限| 本科及以上学历</p>
+                         </div>
+
+
+
+                         <div style="width: 300px; height: 76px; background: #fff; float: left; margin-bottom: 0;">
+                         
+
+                         <div style="width: 266px; height: 45px; margin: 15px; margin-top: 0px;" class=" layui-bg-red layui-btn layui-btn-lg layui-btn-normal  "> <h3>帮我内推</h3>
+
+                         </div>
+                          <a href="" style="margin-left: 19px; margin-top: 30px;"> <i class="layui-icon "> &#xe69c;</i> <span>不感兴趣</span></a>
+                          <a href="" style="margin-left: 45px;"> <i class="layui-icon"> &#xe67b;</i> <span>收藏</span></a>
+                          <a href="" style="margin-left: 50px;" ><i class="layui-icon">&#xe641;</i> <span>分享</span></a>
+
+
+                         </div>
+
+
+
+
+                    </div>
+
+
+
+               </div>
+
+               <div class="zhong" style="width: 1180px; height: 831px; background: #F5F5F7; margin: 0 auto;">
+                    <div class="zhongleft" style="width: 786.64px;height: 628px; background: #fff; padding-top: 5px; float: left;">
+
+                                                      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                                     <legend style="font-size: 15px;"><b>职位描述</b></legend>
+                                   </fieldset>   
+
+                                   <dl style="margin-left: 29px;">
+                                   <dd>要求:</dd>
+                                   <dd>- 大三，大四在校本科生或研一学生</dd>
+                                   <dd>- 保证每周工作3个工作日或以上（不包括周六日），能够保证连续工作六个月或以上</dd>
+                                   <dd>- 熟悉基本Office操作</dd>
+                                   <dd>- 拥有良好的思考、逻辑分析、组织、谈判以及沟通能力，对数字敏感</dd>
+                                   <dd>- 具有团队合作精神，及优秀的学习热情及能力</dd>
+                                   <dd>- 英语六级</dd>
+                                   <dd>- 在校担任过学生干部，有一定组织和领导能力</dd>
+                                   <dd>- 热爱运动</dd>
+                                   <dd>工作内容：</dd>
+                                   <dd>- 使用订单管理系统，来跟踪采购订单直至配送完成。</dd>
+                                   <dd>- 和供应商协调订单异常，并及时以客户进行及时沟通</dd>
+                                   <dd>- 协助开展供应链改善项目，帮助供应商提升供应链绩效</dd>
+                                   <dd>- 处理订单异常，确保订单信息准确清晰。</dd>
+                                   <dd>薪酬福利：</dd>
+                                   <dd>- 200元/天</dd>
+                                   <dd>- 商业保险（意外保障）</dd>
+                                   <dd>- 多元的发展机会，实习表现优异者，有留用机会。</dd>
+
+                                   <dd>- 提供供应链学习的平台, 很多的培训学习机会。</dd>
+
+                                   <dd>请发送有意者请将个人中英简历（附照片）</dd>
+
+
+
+                                   </dl>
+
+
+                                                      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                                     <legend style="font-size: 15px;"><b>工作地点</b></legend>
+                                   </fieldset>   
+                                   <p style="margin-left: 32px; ">深圳</p>
+
+                   
+ 
+
+
+                    </div>
+                    
+
+                    <div class="zhongyou" style="width: 369.36px; height: 198px; background: #fff; float: left; margin-left: 23.8px;  text-align: center;">
+                    <img  style="margin-top: 40px;" src="img/dikanong.png">
+                    <h2>迪卡侬</h2>
+
+                    <div class="zhongxia" style="width: 369px; height: 1500px; background: #F5F5F7; margin-top:60px; text-align: left; ">
+
+                        <dl style="margin-left: 10px; font-size: 15px;  background: #fff; border-bottom: solid 2px pink; padding: 10px;"><b>热门职位</b></dl>
+
+                        <dd style=" margin-left: 10px; font-size: 13px; background: #F5F5F7; height: 25px;padding: 6px;">供应链管理实习生【可转正】</dd>
+
+                         <dd style=" margin-left: 10px; font-size: 13px; background: #fff; height: 25px;padding: 6px;">项目经理助理实习生</dd>
+
+                          <dd style=" margin-left: 10px; font-size: 13px; background: #F5F5F7; height: 25px;padding: 6px;">投资分析实习生</dd>
+
+                         <dd style=" margin-left: 10px; font-size: 13px; background: #fff; height: 25px;padding: 6px;">北京财务中心实习生</dd>
+
+
+
+
+                          <dd style=" margin-left: 10px; font-size: 13px; background: #F5F5F7; height: 25px;padding: 6px;">人力实习生</dd>
+
+                         <dd style=" margin-left: 10px; font-size: 13px; background: #fff; height: 25px;padding: 6px;">Java实习生</dd>
+
+
+
+
+
+                          <dd style=" margin-left: 10px; font-size: 13px; background: #F5F5F7; height: 25px;padding: 6px;">债券融资岗实习生</dd>
+
+                         <dd style=" margin-left: 10px; font-size: 13px; background: #fff; height: 25px;padding: 6px;">人力资源共享服务中心实习生</dd>
+
+
+
+
+                          <dd style=" margin-left: 10px; font-size: 13px; background: #F5F5F7; height: 25px;padding: 6px;">Tech Writer（PM）实习生</dd>
+
+                         <dd style=" margin-left: 10px; font-size: 13px; background: #fff; height: 25px;padding: 6px;">产品部实习生招聘</dd>
+
+
+
+                        
+
+                         <div class="rightxia " style="width: 360px; height: 831px; background:#fff; margin-top: 20px; margin-left: 10px; padding-top:  15px">
+                            <a href="" style="margin-left: 15px; ">超级简历模板</a>
+
+                            <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+
+                             <div onmouseover="onm()" class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn"  style="float: left; margin-top: 30px;" onclick="qwe()" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+                                            
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+
+                              <div class="xia" style="background: #fff;">
+                            <div class="rightxia1" style="width: 343.36px; height: 105px; background: #fff; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+
+                              <img src="img/dengpao.png" style="width: 40px; height: 34.8px;">
+                              <h4 style="margin-left:  50px; margin-top: -35px;">零经验实习简历模板 <br> <span style="font-size: 10px;">12345678人使用</span></h4>
+                              <p style="margin-top: 10px;">此模板适用于学生找实习，第一次工作，没有实习经历的同学</p>
+
+
+
+                            </div>
+                            <div class="rightxia2" style="width: 90%; height: 105px; background: #F5F5F7; margin: 0 auto; margin-top: 10px; border-bottom: solid 1px #F5F5F7; ">
+
+                             <div class="layui-btn layui-btn-warm" style="margin: 30px;  float: left;">中文模板</div>
+                             <div class="layui-btn" style="float: left; margin-top: 30px;" >英文模板</div>
+
+
+                            </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+               </div>
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+          <div class="tanchu1" id="tanchu1" >
+                                              <div class="tanchukuang1" id="tanchukuang1">
+                                                <div class="jianting1" id="jianting1" onmouseout="out()" onmouseover="onm()">
+                                                  
+                                                  
+                                                  <a class="guanbi1" href="#"><img  onclick="guanbi1()" src="img/x.png"/></a>
+                                                  <img style="width: 200px;height: 200px; " src="img/x.png"/>
+                                                  <div class="btn">
+                                                    <a href="">使用模板</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                                        
+                                            </div>    
+          <script type="text/javascript">
+
+          function qwe(){
+          	var tanchu1=document.getElementById('tanchu1');
+          	console.log(tanchu1);
+          	tanchu1.style.display="block";
+
+
+
+          }
+
+
+
+
+
+          </script>
+      
+      </body>            
+
+
+
