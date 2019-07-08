@@ -26,41 +26,47 @@
 				z-index: 9999;
 			}
 			.daohang .juzhong{
-				width: 1745px;
+				width: 100%;
 				height: 55px;
 				margin: 0 auto;
 				
 			}
 			.daohang .juzhong .zuo{
-				width: 115px;
+				width:3%;
 				height: 34px;
 				float: left;
 				
-				margin-left: 17px;
+				margin-left: 4%;
 			}
 			.daohang .juzhong .you{
-				width: 238px;
+				width: 20%;
 				height: 55px;
 				float: right;
-				
+				margin-right: -4%;
 			}
 			.daohang .juzhong .you .saoma{
 				width: 240px;
 				height: 307px;
 				
 				position: fixed;
-				left: 1480px;
-				top: 55px;
+				left: 78%;
+				top: 50px;
 				cursor: pointer;
 				display: none;
 				box-sizing: border-box;
 				box-shadow:  0 1px 5px #DEDEDE;
 				z-index: 9999;
 			}
+			.daohang .juzhong .you .imgd{
+				padding: 0 0 20px 0;
+			}
 			.daohang .juzhong .you .saoma img{
 				width: 160px;
 				height: 160px;
 				margin: 8px 40px;
+			}
+			.daohang .juzhong .you .saoma img{
+				
 			}
 			.daohang .juzhong .you .saoma div:nth-child(1){
 				width: 239px;
@@ -110,12 +116,15 @@
 				background-color: red;
 				color: white;
 			}
+			.daohang .juzhong .you .zuced .zuce:hover{
+				
+			}
 			.daohang .juzhong .zhong{
-				width: 530px;
+				width: 40%;
 				height: 55px;
 				float: left;
 				
-				margin-left: 420px;
+				margin-left: 25%;
 			}
 			.daohang .juzhong .zhong ul{
 				width: 530px;
@@ -663,7 +672,7 @@
 				
 			}
 			.content .rt .rlist .tanchu{
-				width: 1874px;
+				width: 100%;
 				height: 100%;
 				background-color: rgba(0,0,0,0.3);
 				position: fixed;
@@ -687,7 +696,7 @@
 				width: 500px;
 				height: 679px;
 				margin: 0 auto;
-				margin-left: 205px;
+				
 			}
 			.content .rt .rlist .tanchu .tanchukuang .guanbi{
 				display: block;
@@ -765,7 +774,7 @@
 			<div class="juzhong">
 				<div class="zuo">
 					<div id="">
-						<a href="#"><img style="width: 115px;height: 34px;margin-top: 10px;" src="layui/images/gonglue/new_wondercv_logo_zh-CN.png"/></a>
+						<a href="超级简历.html"><img style="width: 115px;height: 34px;margin-top: 10px;" src="layui/images/gonglue/new_wondercv_logo_zh-CN.png"/></a>
 					</div>
 				</div>
 				<div class="zhong">
@@ -777,9 +786,9 @@
 						<li  onclick="window.open('mingqineiyui.html','_self')">名企推荐</li>
 					</ul>
 				</div>
-				<div class="you"  onmouseover="onm()" onmouseout="out()" >
-					<div onmouseover="onm()" onmouseout="out()" style="float: left;"><img style="cursor: pointer;width: 20px;height: 20px;margin-top: 17px;" src="layui/images/gonglue/shouji.png"/></div>
-					<div class="saoma" id="saoma" >
+				<div class="you" >
+					<div class="imgd" style="float: left;" onmouseover="onm()" ><img onclick="show()"  style="cursor: pointer;width: 20px;height: 20px;margin-top: 17px;" src="layui/images/gonglue/shouji.png"/></div>
+					<div class="saoma" id="saoma" onmouseover="onm()" onmouseout="out()">
 						<div id="s1">
 						     扫码下载App 同步编辑
 						</div>
@@ -793,9 +802,9 @@
 						<div id="weixin" class="weixin" onmouseover="onm1()" onmouseout="out1()" onclick="weixin()">微信</div>
 					</div>
 					<div style="width: 2px;height: 26px;float: left;border-left: 2px solid #999999;margin-top: 14px;margin-left: 16px;"></div>
-					<div style="height: 32px; float: right;">
+					<div class="zuced" style="height: 32px; float: left;margin-left: 6%;">
 						<a style="width: 80px;height: 32px;display: inline-block;float: left;border: 1px solid red;margin-right: 20px;margin-top: 9px;" href="erweima.html">登陆</a>
-						<a style="width: 80px;height: 32px;display: inline-block;background-color: red;float: right;border: 1px solid red;margin-top: 9px;color: white;" href="erweima.html">注册</a>
+						<a class="zuce" style="width: 80px;height: 32px;display: inline-block;background-color: red;float: right;border: 1px solid red;margin-top: 9px;color: white;" href="erweima.html">注册</a>
 					</div>
 				</div>
 			</div>
@@ -805,7 +814,7 @@
 			<span class="layui-breadcrumb" lay-separator=">">
 			  <a href="超级简历.html">首页</a>
 			  <a href="">简历攻略</a>
-			  <a><cite>推荐</cite></a>
+			  <a><cite id="huan">推荐</cite></a>
 			</span>
 			
 		</div>
@@ -983,14 +992,14 @@
 					<div class="zhongbanner">
 						<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
 						  <ul class="layui-tab-title">
-						    <li class="layui-this"><b>推荐</b></li>
-						    <li>简历内容</li>
-						    <li>英文简历</li>
-						    <li>简历格式</li>
-						    <li>学生简历</li>
-						    <li>简历投递</li>
-						    <li>求职攻略</li>
-						    <li>面试经验</li>
+						    <li class="layui-this" onclick="qiehuan()"><b>推荐</b></li>
+						    <li onclick="qiehuan1()">简历内容</li>
+						    <li onclick="qiehuan2()">英文简历</li>
+						    <li onclick="qiehuan3()">简历格式</li>
+						    <li onclick="qiehuan4()">学生简历</li>
+						    <li onclick="qiehuan5()">简历投递</li>
+						    <li onclick="qiehuan6()">求职攻略</li>
+						    <li onclick="qiehuan7()">面试经验</li>
 						  </ul>
 						  <div class="layui-tab-content"></div>
 						</div>   
@@ -1125,7 +1134,7 @@
 				<div class="rlist" >
 					<div class="tanchu" id="tanchu">
 						<div class="tanchukuang" id="tanchukuang">
-							<div class="jianting" id="jianting" onmouseout="out()" onmouseover="onm()">
+							<div class="jianting" id="jianting">
 								
 								
 								<a class="guanbi" href="#"><img  onclick="guanbi()" src="layui/images/gonglue/x.png"/></a>
@@ -1510,7 +1519,7 @@
 			}
 			function out () {
 				var saoma =document.getElementById("saoma");
-				console.log("123");
+				console.log("6666");
 				saoma.style.display="none";
 			
 			}
@@ -1529,8 +1538,15 @@
 				var app =document.getElementById("app");
 				app.style.cssText="background-color: red;color: white;"
 			}
-			function out2 () {
 			
+			function onm3 () {
+				
+				var app =document.getElementById("app");
+				app.style.cssText="background-color: red;color: white;"
+			}
+			function show () {
+				var saoma =document.getElementById("saoma");
+				saoma.style.display="block";
 			}
 			
 			function weixin () {
@@ -1568,6 +1584,38 @@
 				tanchu.style.display="block";
 				var tanchukuang =document.getElementById("tanchukuang");
 				tanchukuang.style.cssText="animation:myfirst linear 0.2s;"
+			}
+			function qiehuan () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="推荐"
+			}
+			function qiehuan1 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="简历内容"
+			}
+			function qiehuan2 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="英文简历"
+			}
+			function qiehuan3 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="简历格式"
+			}
+			function qiehuan4 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="学生简历"
+			}
+			function qiehuan5 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="简历投递"
+			}
+			function qiehuan6 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="求职攻略"
+			}
+			function qiehuan7 () {
+				var huan= document.getElementById("huan");
+				huan.innerHTML="面试经验"
 			}
 		</script>
 		
